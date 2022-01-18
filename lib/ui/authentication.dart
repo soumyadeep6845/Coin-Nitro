@@ -19,17 +19,18 @@ class _AuthenticationState extends State<Authentication> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.purple.shade700, Colors.indigo],
+            colors: [Colors.teal, Colors.redAccent],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
+            Container(
+              width: MediaQuery.of(context).size.width / 1.3,
               child: TextFormField(
+                style: TextStyle(color: Colors.white),
                 controller: _emailField,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
@@ -44,9 +45,11 @@ class _AuthenticationState extends State<Authentication> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
+            SizedBox(height: MediaQuery.of(context).size.height / 35),
+            Container(
+              width: MediaQuery.of(context).size.width / 1.3,
               child: TextFormField(
+                style: TextStyle(color: Colors.white),
                 controller: _passwordField,
                 obscureText: true,
                 decoration: InputDecoration(
@@ -61,6 +64,7 @@ class _AuthenticationState extends State<Authentication> {
                 ),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height / 35),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
               height: 45.0,
@@ -84,6 +88,7 @@ class _AuthenticationState extends State<Authentication> {
                 child: Text('Click to Register'),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height / 35),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
               height: 45.0,
