@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481329158973",
+    "project_id": "coin-nitro",
+    "storage_bucket": "coin-nitro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481329158973:android:ace12fcf05514d7b930354",
+        "android_client_info": {
+          "package_name": "com.example.crypto_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481329158973-p39vqe2g8s0tmmgqk4tpsgf89jea2h5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVs4lk0k9kAmYUE8JoCk5kec9tNundigI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481329158973-p39vqe2g8s0tmmgqk4tpsgf89jea2h5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
