@@ -1,3 +1,4 @@
+import 'package:crypto_app/net/flutterfire.dart';
 import 'package:flutter/material.dart';
 
 class Authentication extends StatefulWidget {
@@ -66,7 +67,13 @@ class _AuthenticationState extends State<Authentication> {
                 color: Colors.cyanAccent,
               ),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () async {
+                  bool shouldNavigate =
+                      await register(_emailField.text, _passwordField.text);
+                  if (shouldNavigate) {
+                    //Navigate
+                  }
+                },
                 child: Text('Click to Register'),
               ),
             ),
@@ -78,7 +85,13 @@ class _AuthenticationState extends State<Authentication> {
                 color: Colors.cyanAccent,
               ),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () async {
+                  bool shouldNavigate =
+                      await signIn(_emailField.text, _passwordField.text);
+                  if (shouldNavigate) {
+                    //Navigate
+                  }
+                },
                 child: Text('Click to Login'),
               ),
             ),
