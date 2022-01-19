@@ -70,7 +70,7 @@ class _AuthenticationState extends State<Authentication> {
               height: 45.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
-                color: Colors.cyanAccent,
+                gradient: LinearGradient(colors: [Colors.amber, Colors.pink]),
               ),
               child: MaterialButton(
                 onPressed: () async {
@@ -94,7 +94,7 @@ class _AuthenticationState extends State<Authentication> {
               height: 45.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
-                color: Colors.cyanAccent,
+                gradient: LinearGradient(colors: [Colors.amber, Colors.pink]),
               ),
               child: MaterialButton(
                 onPressed: () async {
