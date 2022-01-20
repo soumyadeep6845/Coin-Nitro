@@ -94,6 +94,13 @@ class _HomeViewState extends State<HomeView> {
                         IconButton(
                           onPressed: () async {
                             await removeCoin(document.id);
+                            Scaffold.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Removed ${document.id}'),
+                                duration: Duration(milliseconds: 700),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
                           },
                           icon: Icon(
                             Icons.delete,
