@@ -85,7 +85,7 @@ class _AuthenticationState extends State<Authentication> {
                     );
                   }
                 },
-                child: Text('Click to Register'),
+                child: Text('Register'),
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height / 35),
@@ -109,7 +109,7 @@ class _AuthenticationState extends State<Authentication> {
                     );
                   }
                 },
-                child: Text('Click to Login'),
+                child: Text('Login'),
               ),
             ),
           ],

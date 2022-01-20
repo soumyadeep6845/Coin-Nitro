@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto_app/net/api_methods.dart';
+import 'package:crypto_app/net/flutterfire.dart';
 import 'package:crypto_app/ui/add_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -67,23 +68,38 @@ class _HomeViewState extends State<HomeView> {
                     right: 15.0,
                   ),
                   child: Container(
-                    // width: MediaQuery.of(context).size.width / 1.3,
                     height: MediaQuery.of(context).size.height / 12,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.indigo,
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        SizedBox(width: 5.0),
                         Text(
-                          'Coin Name: ${document.id}',
-                          style: TextStyle(color: Colors.white),
+                          'Coin: ${document.id}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                          ),
                         ),
                         Text(
-                          'Amount owned: ₹${getValue(document.id, document['Amount']).toStringAsFixed(2)}',
-                          style: TextStyle(color: Colors.white),
+                          '₹${getValue(document.id, document['Amount']).toStringAsFixed(2)}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                          ),
                         ),
+                        IconButton(
+                          onPressed: () async {
+                            await removeCoin(document.id);
+                          },
+                          icon: Icon(
+                            Icons.delete,
+                            color: Colors.red,
+                          ),
+                        )
                       ],
                     ),
                   ),
