@@ -13,7 +13,7 @@ class _AddViewState extends State<AddView> {
     'ethereum',
   ];
 
-  String dropdownValue = 'bitcoin';
+  String dropdownValue = 'Choose coin';
   TextEditingController _amountController = TextEditingController();
 
   @override

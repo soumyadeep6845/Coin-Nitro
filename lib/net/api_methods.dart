@@ -16,14 +16,14 @@ Future<double> getPrice(String id) async {
   }
 }
 
-Future<String> getDescription(String id) async {
-  try {
-    Uri url = Uri.parse('https://api.coingecko.com/api/v3/coins/' + id);
-    var response = await http.get(url);
-    var json = jsonDecode(response.body);
-    var description = json['description']['en'].toString();
-    return description;
-  } catch (e) {
-    return (e.toString());
-  }
-}
+// Future<String> getDescription(String id) async {
+//   try {
+//     Uri url = Uri.parse('https://api.coingecko.com/api/v3/coins/' + id);
+//     var response = await http.get(url);
+//     var json = jsonDecode(response.body);
+//     var description = json['description']['en'].toString();
+//     return description;
+//   } catch (e) {
+//     return (e.toString());
+//   }
+// }
