@@ -12,7 +12,7 @@ Future<double> getPrice(String id) async {
     return double.parse(value);
   } catch (e) {
     print(e.toString());
-    return 0.0;
+    return 0;
   }
 }
 

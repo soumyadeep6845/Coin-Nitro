@@ -7,7 +7,7 @@ Future<bool> signIn(String email, String password) async {
         .signInWithEmailAndPassword(email: email, password: password);
     return true;
   } catch (e) {
-    print(e);
+    print(e.toString());
     return false;
   }
 }
