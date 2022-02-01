@@ -49,7 +49,7 @@ Future<bool> addCoin(String id, String amount) async {
         documentReference.set({'Amount': value});
         return true;
       }
-      double newAmount = snapshot['Amount'] + value; //CHECK HEREEEEE
+      double newAmount = snapshot['Amount'] + value;
       transaction.update(documentReference, {'Amount': newAmount});
     });
     return true;

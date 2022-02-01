@@ -48,7 +48,8 @@ class _HomeViewState extends State<HomeView> {
           color: Colors.white,
         ),
         child: StreamBuilder(
-          stream: FirebaseFirestore.instance //Adding a path to firestore.
+          //Adding a path to firestore.
+          stream: FirebaseFirestore.instance
               .collection('Users')
               .doc(FirebaseAuth.instance.currentUser!.uid)
               .collection('Coins')

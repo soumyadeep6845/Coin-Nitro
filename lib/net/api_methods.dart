@@ -9,8 +9,7 @@ Future<double> getPrice(String id) async {
     var value = json['market_data']['current_price']['inr'].toString();
     return double.parse(value);
   } catch (e) {
-    print(e.toString());
+    print('An error occured!');
     return 0;
   }
 }
-
